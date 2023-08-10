@@ -7,7 +7,7 @@ export default function PantallaInicio(props) {
         navigation.navigate("Calculadora");
     }
     return (
-        <View style={style.container}>
+        <View style={styles.container}>
             <Text style={styles.InicioSuperiorTexto}>Comencemos a calcular</Text>
             <TouchableOpacity style={styles.botonInicio} onPress={goApp}>
                 <Text style={styles.botonInicioTexto}>Calculadora</Text>
