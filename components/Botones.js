@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
   },
   buttonAccent: {
     backgroundColor: "#fff",
+    paddingHorizontal: 49,
   },
   textAccent: {
     color: "#000",

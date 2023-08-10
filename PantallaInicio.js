@@ -21,11 +21,14 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: '#FFB678',
+        height: "100%"
+        
     },
     InicioSuperiorTexto:{
         fontSize: 40,
         margin: 20,
-        marginTop: 100,
+        marginTop: -200,
         marginBottom: 170,
         textAlign: "center",
 
@@ -34,12 +37,13 @@ const styles = StyleSheet.create({
     botonInicio:{
         backgroundColor: "#53FA96",
         padding: 20,
-        borderRadius: 10,
+        borderWidth: 3,
+        borderRadius: 20,
+        borderColor: "#fff"
         
     },
     botonInicioTexto:{
         fontSize: 30,
-
     },
 
 })

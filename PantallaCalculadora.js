@@ -19,17 +19,14 @@ export default class App extends Component {
       <View style={styles.container}>
         {/* Status bae here */}
           <Text style={styles.value}>
-            {parseFloat(this.state.currentValue).toLocaleString()}
-          </Text>
-          <Text style={styles.value}>
-            {parseFloat(this.state.currentValue).toLocaleString()}
+           { '= '}{parseFloat(this.state.currentValue).toLocaleString()}
           </Text>
 
         <SafeAreaView style={styles.fondoVerde}>
           {/* Do create componentRow */}
           <Fila >
             <Botones
-              text="C"
+              text="AC"
               theme="secondary"
               onPress={() => this.HandleTap("clear")}
             />
@@ -88,8 +85,8 @@ export default class App extends Component {
           </Fila>
 
           <Fila >
-            <Botones text="0" onPress={() => this.HandleTap("number", 0)} />
             <Botones text="." onPress={() => this.HandleTap("number", ".")} />
+            <Botones text="0" onPress={() => this.HandleTap("primary", 0)} />
             <Botones
               text="="
               theme="accent"
@@ -120,3 +117,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#596643"
   },
 });
+
+// Fuente del código de la calculadora: 
+// https://www.freecodecamp.org/news/how-to-build-a-calculator-app-using-react-native-a-step-by-step-tutorial/
