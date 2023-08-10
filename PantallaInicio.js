@@ -10,17 +10,36 @@ export default function PantallaInicio(props) {
         <View style={styles.container}>
             <Text style={styles.InicioSuperiorTexto}>Comencemos a calcular</Text>
             <TouchableOpacity style={styles.botonInicio} onPress={goApp}>
-                <Text style={styles.botonInicioTexto}>Calculadora</Text>
+                <Text style={styles.botonInicioTexto}>{'-> Calculadora <-'}</Text>
             </TouchableOpacity>
-            <Text style={styles.InicioSuperiorTexto}>Presiona el botón para continuar</Text>
+            <Text style={styles.InicioInferiorTexto}>Presiona el botón para continuar</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
+    InicioSuperiorTexto:{
+        fontSize: 40,
+        margin: 20,
+        marginTop: 100,
+        marginBottom: 170,
+        textAlign: "center",
+
+
+    },
+    botonInicio:{
+        backgroundColor: "#53FA96",
+        padding: 20,
+        borderRadius: 10,
+        
+    },
+    botonInicioTexto:{
+        fontSize: 30,
+
+    },
+
 })

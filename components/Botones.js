@@ -13,6 +13,7 @@ export default ({ onPress, text, size, theme }) => {
     textStyles.push(styles.textSecondary);
   } else if (theme === "accent") {
     buttonStyles.push(styles.buttonAccent);
+    textStyles.push(styles.textAccent);
   }
 
   return (
@@ -40,11 +41,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    fontSize: 24,
+    fontSize: 35,
   },
   textSecondary: {
-    color: "#000",
-    fontSize: 24,
+    color: "#246381",
+    fontSize: 40,
+    fontWeight: "500"
   },
   buttonDouble: {
     width: screen.width / 2 - 10,
@@ -53,9 +55,13 @@ const styles = StyleSheet.create({
     paddingLeft: 40,
   },
   buttonSecondary: {
-    backgroundColor: "#FFFF00",
+    backgroundColor: "#ebe939",
   },
   buttonAccent: {
-    backgroundColor: "#FFFF00",
+    backgroundColor: "#fff",
   },
+  textAccent: {
+    color: "#000",
+    fontSize: 50,
+  }
 });

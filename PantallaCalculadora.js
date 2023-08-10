@@ -18,11 +18,14 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         {/* Status bae here */}
-        <SafeAreaView>
+          <Text style={styles.value}>
+            {parseFloat(this.state.currentValue).toLocaleString()}
+          </Text>
           <Text style={styles.value}>
             {parseFloat(this.state.currentValue).toLocaleString()}
           </Text>
 
+        <SafeAreaView style={styles.fondoVerde}>
           {/* Do create componentRow */}
           <Fila >
             <Botones
@@ -32,7 +35,7 @@ export default class App extends Component {
             />
 
             <Botones
-              text="+/-"
+              text="±"
               theme="secondary"
               onPress={() => this.HandleTap("posneg")}
             />
@@ -44,7 +47,7 @@ export default class App extends Component {
             />
 
             <Botones
-              text="/"
+              text="÷"
               theme="secondary"
               onPress={() => this.HandleTap("operator", "/")}
             />
@@ -56,7 +59,7 @@ export default class App extends Component {
             <Botones text="8" onPress={() => this.HandleTap("number", 8)} />
             <Botones text="9" onPress={() => this.HandleTap("number", 9)} />
             <Botones
-              text="X"
+              text="x"
               theme="secondary"
               onPress={() => this.HandleTap("operator", "*")}
             />
@@ -89,7 +92,7 @@ export default class App extends Component {
             <Botones text="." onPress={() => this.HandleTap("number", ".")} />
             <Botones
               text="="
-              theme="primary"
+              theme="accent"
               onPress={() => this.HandleTap("equal", "=")}
             />
           </Fila>
@@ -108,9 +111,12 @@ const styles = StyleSheet.create({
   },
   value: {
     color: "#fff",
-    fontSize: 42,
+    fontSize: 70,
     textAlign: "right",
     marginRight: 20,
     marginBottom: 10,
+  },
+  fondoVerde: {
+    backgroundColor: "#596643"
   },
 });
